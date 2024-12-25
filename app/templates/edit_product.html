@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Product</h2>
+<form method="POST">
+    <div class="form-group">
+        <label for="nama">Name</label>
+        <input type="text" class="form-control" id="nama" name="nama" value="{{ product.nama }}" required>
+    </div>
+    <div class="form-group">
+        <label for="jumlah">Quantity</label>
+        <input type="number" class="form-control" id="jumlah" name="jumlah" value="{{ product.jumlah }}" required>
+    </div>
+    <div class="form-group">
+        <label for="harga">Price</label>
+        <input type="number" step="0.01" class="form-control" id="harga" name="harga" value="{{ product.harga }}" required>
+    </div>
+    <button type="submit" class="btn btn-success">Save Changes</button>
+</form>
+{% endblock %}
